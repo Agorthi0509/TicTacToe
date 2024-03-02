@@ -1,0 +1,55 @@
+package TIcTacToe.model;
+
+public class Cell {
+   private int row;
+  private   int col;
+   private CellState cellState;
+    private Player player;
+
+    public Cell(int row, int col) {
+        this.row = row;
+        this.col = col;
+
+    }
+
+    public Integer getRow() {
+        return row;
+    }
+
+    public void setRow(Integer row) {
+        this.row = row;
+    }
+
+    public Integer getCol() {
+        return col;
+    }
+
+    public void setCol(Integer col) {
+        this.col = col;
+    }
+
+    public CellState getCellState() {
+        return cellState;
+    }
+
+    public void setCellState(CellState cellState) {
+        this.cellState = cellState;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public void display() {
+        if (CellState.FILLED.equals(cellState)) {
+            System.out.print("| "+player.getSymbol()+" |");
+        }
+        else {
+            System.out.print("| - |");
+        }
+    }
+}
