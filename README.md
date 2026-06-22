@@ -1,1 +1,1 @@
-tic tac toe using springboot
+Tic Tac Toe using springboot
